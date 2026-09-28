@@ -1,0 +1,359 @@
+/* ========================================
+   FIXNEAR - STATUS TRACKER
+======================================== */
+
+.status-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 55px 20px;
+}
+
+
+/* HEADER */
+
+.status-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.status-label {
+    margin: 0 0 8px;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.status-header h1 {
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 36px;
+}
+
+.status-header p {
+    margin: 0;
+
+    color: #64748b;
+}
+
+
+/* SEARCH */
+
+.status-search {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    margin-bottom: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(15, 23, 42, 0.06);
+}
+
+.status-search input {
+    flex: 1;
+
+    padding: 13px 15px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.status-search button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.status-search button:hover {
+    background: #1d4ed8;
+}
+
+
+/* REPORT */
+
+.tracked-report {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 23, 42, 0.06);
+}
+
+
+/* HEADER */
+
+.tracked-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.tracked-id {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.tracked-header h2 {
+    margin: 0;
+
+    color: #0f172a;
+}
+
+.current-status {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* DESCRIPTION */
+
+.tracked-description {
+    margin: 20px 0;
+
+    color: #475569;
+
+    line-height: 1.6;
+}
+
+
+/* TIMELINE */
+
+.status-timeline {
+    position: relative;
+
+    margin: 30px 0;
+}
+
+.timeline-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 15px;
+
+    min-height: 70px;
+}
+
+
+/* LINE */
+
+.timeline-item:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 30px;
+
+    width: 2px;
+
+    height: 45px;
+
+    background: #e2e8f0;
+}
+
+.timeline-item.completed:not(:last-child)::after {
+    background: #2563eb;
+}
+
+
+/* DOT */
+
+.timeline-dot {
+    position: relative;
+
+    z-index: 2;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.timeline-item.completed .timeline-dot {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+/* CONTENT */
+
+.timeline-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.timeline-content strong {
+    color: #334155;
+
+    font-size: 15px;
+}
+
+.timeline-content span {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* DETAILS */
+
+.tracked-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+.tracked-details div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+}
+
+.tracked-details span {
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.tracked-details strong {
+    color: #334155;
+
+    font-size: 14px;
+}
+
+
+/* ERROR */
+
+.status-error {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 12px;
+
+    color: #b91c1c;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .status-page {
+        padding: 35px 15px;
+    }
+
+    .status-header h1 {
+        font-size: 28px;
+    }
+
+    .status-search {
+        flex-direction: column;
+    }
+
+    .status-search button {
+        width: 100%;
+    }
+
+    .tracked-header {
+        flex-direction: column;
+    }
+
+    .tracked-details {
+        grid-template-columns: 1fr;
+    }
+
+}

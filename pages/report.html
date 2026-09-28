@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report an Issue | FixNear</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-icon">✓</span>
+
+                FixNear
+
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="explore.html">
+                    Explore Issues
+                </a>
+
+                <a href="map.html">
+    🗺️ Issue Map
+</a>
+
+                <a href="my-reports.html">
+                    My Reports
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+            <a href="report.html" class="nav-button">
+                + Report Issue
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- REPORT SECTION -->
+
+    <main class="report-page">
+
+        <div class="container report-container">
+
+            <!-- PAGE HEADER -->
+
+            <div class="report-heading">
+
+                <span>REPORT A PROBLEM</span>
+
+                <h1>
+                    Help improve your community
+                </h1>
+
+                <p>
+                    Tell us about a problem you found.
+                    Your report can help bring attention to
+                    issues in your neighborhood.
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form id="reportForm" class="report-form">
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-section">
+
+                    <h2>
+                        What is the problem?
+                    </h2>
+
+                    <p class="form-description">
+                        Select the category that best describes
+                        the issue.
+                    </p>
+
+
+                    <div class="category-grid">
+
+
+                        <label class="category-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="Pothole"
+                                required
+                            >
+
+                            <div class="category-card">
+
+                                <span>🕳️</span>
+
+                                <strong>Pothole</strong>
+
+                                <small>
+                                    Damaged road
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="category-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="Streetlight"
+                            >
+
+                            <div class="category-card">
+
+                                <span>💡</span>
+
+                                <strong>Streetlight</strong>
+
+                                <small>
+                                    Broken or missing light
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="category-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="Garbage"
+                            >
+
+                            <div class="category-card">
+
+                                <span>🗑️</span>
+
+                                <strong>Garbage</strong>
+
+                                <small>
+                                    Waste or dumping
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="category-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="Water Leakage"
+                            >
+
+                            <div class="category-card">
+
+                                <span>💧</span>
+
+                                <strong>Water Leakage</strong>
+
+                                <small>
+                                    Water leak or flooding
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="category-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="Road Damage"
+                            >
+
+                            <div class="category-card">
+
+                                <span>🚧</span>
+
+                                <strong>Road Damage</strong>
+
+                                <small>
+                                    Damaged road surface
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="category-option">
+
+                            <input
+                                type="radio"
+                                name="category"
+                                value="Other"
+                            >
+
+                            <div class="category-card">
+
+                                <span>📍</span>
+
+                                <strong>Other</strong>
+
+                                <small>
+                                    Another local issue
+                                </small>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-section">
+
+                    <h2>
+                        Describe the problem
+                    </h2>
+
+                    <p class="form-description">
+                        Give enough information so others can
+                        understand the issue.
+                    </p>
+
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="6"
+                        maxlength="500"
+                        placeholder="Example: There is a large pothole near the main entrance of the college..."
+                        required
+                    ></textarea>
+
+                    <div class="character-count">
+
+                        Maximum 500 characters
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO -->
+
+                <div class="form-section">
+
+                    <h2>
+                        Add a photo
+                    </h2>
+
+                    <p class="form-description">
+                        A photo helps people understand the problem.
+                    </p>
+
+
+                    <label
+                        for="issuePhoto"
+                        class="upload-box"
+                    >
+
+                        <div class="upload-icon">
+                            📷
+                        </div>
+
+                        <strong>
+                            Click to upload a photo
+                        </strong>
+
+                        <small>
+                            JPG, PNG or WEBP
+                        </small>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="issuePhoto"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <div id="imagePreview"></div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="form-section">
+
+                    <h2>
+                        Where is the problem?
+                    </h2>
+
+                    <p class="form-description">
+                        Enter the location where you found the issue.
+                    </p>
+
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="Example: Near City Park, Bengaluru"
+                        required
+                    >
+
+
+                    <button
+                        type="button"
+                        id="locationButton"
+                        class="location-button"
+                    >
+                        📍 Use My Current Location
+                    </button>
+
+                    <p
+                        id="locationMessage"
+                        class="location-message"
+                    ></p>
+
+                </div>
+
+
+                <!-- SEVERITY -->
+
+                <div class="form-section">
+
+                    <h2>
+                        How serious is the problem?
+                    </h2>
+
+                    <p class="form-description">
+                        Select the severity of the issue.
+                    </p>
+
+
+                    <div class="severity-options">
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="severity"
+                                value="Low"
+                                required
+                            >
+
+                            <span class="severity-low">
+                                🟢 Low
+                            </span>
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="severity"
+                                value="Medium"
+                            >
+
+                            <span class="severity-medium">
+                                🟡 Medium
+                            </span>
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="severity"
+                                value="High"
+                            >
+
+                            <span class="severity-high">
+                                🔴 High
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-report-button"
+                >
+
+                    Submit Report →
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/report.js"></script>
+
+</body>
+
+</html>

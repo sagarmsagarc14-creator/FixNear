@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear - Dashboard</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVBAR
+======================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html"
+           class="logo">
+
+            Fix<span>Near</span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="explore.html">
+                Explore Issues
+            </a>
+
+            <a href="map.html">
+                Issue Map
+            </a>
+
+            <a href="my-reports.html">
+                My Reports
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+
+        <a href="report.html"
+           class="nav-report-btn">
+
+            + Report Issue
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ========================================
+     DASHBOARD
+======================================== -->
+
+<main class="dashboard-page">
+
+
+    <!-- ====================================
+         HEADER
+    ==================================== -->
+
+    <section class="dashboard-header">
+
+        <div>
+
+            <p class="dashboard-label">
+                FIXNEAR DASHBOARD
+            </p>
+
+            <h1>
+                Your Community Activity
+            </h1>
+
+            <p>
+                Track the issues you've reported
+                and see your community impact.
+            </p>
+
+        </div>
+
+
+        <a href="report.html"
+           class="dashboard-report-button">
+
+            + Report New Issue
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ====================================
+         STATISTICS
+    ==================================== -->
+
+    <section class="dashboard-stats">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📋
+            </div>
+
+            <div>
+
+                <span>
+                    Total Reports
+                </span>
+
+                <strong id="totalReports">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📤
+            </div>
+
+            <div>
+
+                <span>
+                    Submitted
+                </span>
+
+                <strong id="submittedReports">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🔧
+            </div>
+
+            <div>
+
+                <span>
+                    In Progress
+                </span>
+
+                <strong id="progressReports">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ✅
+            </div>
+
+            <div>
+
+                <span>
+                    Resolved
+                </span>
+
+                <strong id="resolvedReports">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ====================================
+         CONTENT GRID
+    ==================================== -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- ==================================
+             RECENT REPORTS
+        ================================== -->
+
+        <div class="dashboard-panel recent-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Recent Reports
+                    </h2>
+
+                    <p>
+                        Your latest community reports
+                    </p>
+
+                </div>
+
+
+                <a href="my-reports.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="recentReports"
+                 class="recent-reports">
+
+            </div>
+
+
+            <div id="noRecentReports"
+                 class="dashboard-empty">
+
+                <div>
+                    📋
+                </div>
+
+                <h3>
+                    No reports yet
+                </h3>
+
+                <p>
+                    Your submitted issues will appear here.
+                </p>
+
+                <a href="report.html">
+                    Report Your First Issue
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             COMMUNITY IMPACT
+        ================================== -->
+
+        <div class="dashboard-panel impact-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Your Impact
+                    </h2>
+
+                    <p>
+                        Contribution to the community
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="impact-circle">
+
+                <div>
+
+                    <strong id="impactScore">
+                        0
+                    </strong>
+
+                    <span>
+                        Impact Points
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="impact-message"
+                 id="impactMessage">
+
+                Start reporting local issues
+                to make an impact.
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ====================================
+         CATEGORY BREAKDOWN
+    ==================================== -->
+
+    <section class="dashboard-panel category-panel">
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Report Breakdown
+                </h2>
+
+                <p>
+                    Issues you've reported by category
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-list">
+
+
+            <div class="category-row">
+
+                <div class="category-name">
+                    🕳️ Pothole
+                </div>
+
+                <div class="category-bar">
+
+                    <div
+                        id="potholeBar"
+                        class="category-fill">
+                    </div>
+
+                </div>
+
+                <strong id="potholeCount">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="category-row">
+
+                <div class="category-name">
+                    💡 Streetlight
+                </div>
+
+                <div class="category-bar">
+
+                    <div
+                        id="streetlightBar"
+                        class="category-fill">
+                    </div>
+
+                </div>
+
+                <strong id="streetlightCount">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="category-row">
+
+                <div class="category-name">
+                    🗑️ Garbage
+                </div>
+
+                <div class="category-bar">
+
+                    <div
+                        id="garbageBar"
+                        class="category-fill">
+                    </div>
+
+                </div>
+
+                <strong id="garbageCount">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="category-row">
+
+                <div class="category-name">
+                    💧 Water Leakage
+                </div>
+
+                <div class="category-bar">
+
+                    <div
+                        id="waterBar"
+                        class="category-fill">
+                    </div>
+
+                </div>
+
+                <strong id="waterCount">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="category-row">
+
+                <div class="category-name">
+                    🚧 Road Damage
+                </div>
+
+                <div class="category-bar">
+
+                    <div
+                        id="roadBar"
+                        class="category-fill">
+                    </div>
+
+                </div>
+
+                <strong id="roadCount">
+                    0
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================================
+         QUICK ACTIONS
+    ==================================== -->
+
+    <section class="quick-actions">
+
+        <h2>
+            Quick Actions
+        </h2>
+
+
+        <div class="quick-action-grid">
+
+
+            <a href="report.html"
+               class="quick-action">
+
+                <span>
+                    📢
+                </span>
+
+                <div>
+
+                    <strong>
+                        Report an Issue
+                    </strong>
+
+                    <p>
+                        Tell the community about
+                        a local problem.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <a href="explore.html"
+               class="quick-action">
+
+                <span>
+                    🔎
+                </span>
+
+                <div>
+
+                    <strong>
+                        Explore Issues
+                    </strong>
+
+                    <p>
+                        Discover problems reported
+                        nearby.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <a href="map.html"
+               class="quick-action">
+
+                <span>
+                    🗺️
+                </span>
+
+                <div>
+
+                    <strong>
+                        Open Issue Map
+                    </strong>
+
+                    <p>
+                        View reported problems
+                        on the map.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <a href="my-reports.html"
+               class="quick-action">
+
+                <span>
+                    📊
+                </span>
+
+                <div>
+
+                    <strong>
+                        Track Reports
+                    </strong>
+
+                    <p>
+                        Check the progress of
+                        your reports.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+        © 2026 FixNear — Make your community better.
+    </p>
+
+</footer>
+
+
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

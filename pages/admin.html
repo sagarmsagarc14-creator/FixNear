@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <!-- LOGO -->
+        <a href="../index.html" class="logo">
+            <span>✓</span> FixNear
+        </a>
+
+        <!-- ADMIN NAVIGATION -->
+        <nav class="nav-links">
+
+            <!-- User Home -->
+            <a href="../index.html">
+                🏠 Home
+            </a>
+
+            <!-- Admin Dashboard -->
+            <a href="admin.html" class="active">
+                📊 Dashboard
+            </a>
+
+            <!-- All Reports -->
+            <a href="admin.html#reports">
+                📋 All Reports
+            </a>
+
+            <!-- Explore -->
+            <a href="explore.html">
+                🔎 Explore Issues
+            </a>
+
+            <!-- About -->
+            <a href="about.html">
+                ℹ️ About
+            </a>
+
+            <!-- Logout -->
+            <button
+                id="adminLogout"
+                class="admin-logout-btn">
+                🚪 Logout
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="admin-page">
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="admin-hero">
+
+        <div class="admin-hero-content">
+
+            <span class="admin-badge">
+                🛡️ ADMIN CONTROL CENTER
+            </span>
+
+            <h1>
+                Community Dashboard
+            </h1>
+
+            <p>
+                Monitor, manage and resolve community issues
+                reported through FixNear.
+            </p>
+
+        </div>
+
+        <div class="admin-hero-icon">
+            🛡️
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="admin-overview">
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                📋
+            </div>
+
+            <div>
+                <span class="admin-stat-label">
+                    Total Reports
+                </span>
+
+                <h2 id="adminTotal">
+                    0
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                📩
+            </div>
+
+            <div>
+                <span class="admin-stat-label">
+                    Submitted
+                </span>
+
+                <h2 id="adminSubmitted">
+                    0
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                🔄
+            </div>
+
+            <div>
+                <span class="admin-stat-label">
+                    In Progress
+                </span>
+
+                <h2 id="adminProgress">
+                    0
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                ✅
+            </div>
+
+            <div>
+                <span class="admin-stat-label">
+                    Resolved
+                </span>
+
+                <h2 id="adminResolved">
+                    0
+                </h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ANALYTICS ================= -->
+
+    <section class="admin-analytics">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    ANALYTICS
+                </span>
+
+                <h2>
+                    Community Overview
+                </h2>
+
+                <p>
+                    Quick overview of reported community issues.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="analytics-grid">
+
+
+            <!-- ================= STATUS ================= -->
+
+            <div class="analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <span class="analytics-label">
+                            REPORT STATUS
+                        </span>
+
+                        <h3>
+                            Issue Progress
+                        </h3>
+
+                    </div>
+
+                    <div class="analytics-icon">
+                        📊
+                    </div>
+
+                </div>
+
+
+                <!-- Submitted -->
+
+                <div class="progress-item">
+
+                    <div class="progress-info">
+
+                        <span>
+                            Submitted
+                        </span>
+
+                        <strong id="analyticsSubmitted">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            id="submittedProgress"
+                            class="progress-bar submitted-progress">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- In Progress -->
+
+                <div class="progress-item">
+
+                    <div class="progress-info">
+
+                        <span>
+                            In Progress
+                        </span>
+
+                        <strong id="analyticsProgress">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            id="progressBar"
+                            class="progress-bar progress-progress">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Resolved -->
+
+                <div class="progress-item">
+
+                    <div class="progress-info">
+
+                        <span>
+                            Resolved
+                        </span>
+
+                        <strong id="analyticsResolved">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            id="resolvedProgress"
+                            class="progress-bar resolved-progress">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORIES ================= -->
+
+            <div class="analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <span class="analytics-label">
+                            CATEGORIES
+                        </span>
+
+                        <h3>
+                            Issue Categories
+                        </h3>
+
+                    </div>
+
+                    <div class="analytics-icon">
+                        🗂️
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="categoryBreakdown"
+                    class="category-breakdown">
+                </div>
+
+            </div>
+
+
+            <!-- ================= INSIGHTS ================= -->
+
+            <div class="analytics-card quick-insights">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <span class="analytics-label">
+                            INSIGHTS
+                        </span>
+
+                        <h3>
+                            Quick Insights
+                        </h3>
+
+                    </div>
+
+                    <div class="analytics-icon">
+                        💡
+                    </div>
+
+                </div>
+
+
+                <!-- High Priority -->
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+                        🔴
+                    </div>
+
+                    <div>
+
+                        <span>
+                            High Priority
+                        </span>
+
+                        <strong id="highPriorityCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Resolution Rate -->
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Resolution Rate
+                        </span>
+
+                        <strong id="resolutionRate">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Community Issues -->
+
+                <div class="insight-card">
+
+                    <div class="insight-icon">
+                        🏘️
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Community Issues
+                        </span>
+
+                        <strong id="communityIssues">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RECENT ACTIVITY ================= -->
+
+    <section class="admin-activity-section">
+
+        <div class="admin-section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    ACTIVITY
+                </span>
+
+                <h2>
+                    Recent Activity
+                </h2>
+
+                <p>
+                    Latest activity across the FixNear community.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="adminActivity"
+            class="admin-activity">
+
+            <!-- Activity added by JavaScript -->
+
+        </div>
+
+
+        <div
+            id="activityEmpty"
+            class="activity-empty"
+            style="display: none;">
+
+            <div>
+                🕐
+            </div>
+
+            <h3>
+                No Recent Activity
+            </h3>
+
+            <p>
+                Activity will appear here when reports are submitted
+                or updated.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COMMUNITY REPORTS ================= -->
+
+    <section
+        id="reports"
+        class="admin-reports-section">
+
+        <div class="admin-section-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    REPORT MANAGEMENT
+                </span>
+
+                <h2>
+                    Community Reports
+                </h2>
+
+                <p>
+                    Review and manage all issues submitted by users.
+                </p>
+
+            </div>
+
+
+            <button
+                id="refreshReports"
+                class="admin-refresh-btn">
+
+                🔄 Refresh
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <div class="admin-toolbar">
+
+            <!-- Search -->
+
+            <div class="admin-search">
+
+                <input
+                    type="text"
+                    id="adminSearch"
+                    placeholder="Search reports..."
+                >
+
+            </div>
+
+
+            <!-- Category -->
+
+            <select id="adminCategoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Pothole">
+                    Pothole
+                </option>
+
+                <option value="Streetlight">
+                    Streetlight
+                </option>
+
+                <option value="Garbage">
+                    Garbage
+                </option>
+
+                <option value="Water Leakage">
+                    Water Leakage
+                </option>
+
+                <option value="Road Damage">
+                    Road Damage
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <!-- Status -->
+
+            <select id="adminStatusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="Submitted">
+                    Submitted
+                </option>
+
+                <option value="In Progress">
+                    In Progress
+                </option>
+
+                <option value="Resolved">
+                    Resolved
+                </option>
+
+            </select>
+
+
+            <!-- Severity -->
+
+            <select id="adminSeverityFilter">
+
+                <option value="all">
+                    All Severity
+                </option>
+
+                <option value="Low">
+                    Low
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="High">
+                    High
+                </option>
+
+            </select>
+
+
+            <!-- Reset -->
+
+            <button
+                id="adminResetFilters"
+                class="admin-reset-btn">
+
+                Reset
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= REPORT LIST ================= -->
+
+        <div
+            id="adminReportsContainer"
+            class="admin-reports-container">
+        </div>
+
+
+        <!-- ================= EMPTY ================= -->
+
+        <div
+            id="adminEmpty"
+            class="admin-empty"
+            style="display: none;">
+
+            <div class="empty-icon">
+                📭
+            </div>
+
+            <h3>
+                No Reports Found
+            </h3>
+
+            <p>
+                There are no reports matching your search or filters.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SECURITY ================= -->
+
+    <section class="admin-security-card">
+
+        <div class="security-icon">
+            🔐
+        </div>
+
+        <div>
+
+            <h3>
+                Admin Control
+            </h3>
+
+            <p>
+                This dashboard is intended for authorized
+                FixNear administrators.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="../js/admin.js"></script>
+
+</body>
+</html>

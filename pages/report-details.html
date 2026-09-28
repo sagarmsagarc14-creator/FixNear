@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear - Report Details</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../css/report-details.css">
+</head>
+
+
+<body>
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <!-- LOGO -->
+        <a href="../index.html"
+           class="logo">
+            ✓ Fix<span>Near</span>
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <div class="nav-links">
+
+            <a href="../index.html">
+                🏠 Home
+            </a>
+
+            <a href="my-reports.html">
+                📊 Dashboard
+            </a>
+
+            <a href="explore.html">
+                🔎 Explore Issues
+            </a>
+
+            <a href="map.html">
+                🗺️ Issue Map
+            </a>
+
+            <a href="my-reports.html">
+                📋 My Reports
+            </a>
+
+            <a href="notifications.html">
+                🔔 Notifications
+            </a>
+
+            <a href="about.html">
+                ℹ️ About
+            </a>
+
+        </div>
+
+
+        <!-- REPORT BUTTON -->
+        <a href="report.html"
+           class="nav-report-btn">
+
+            + Report Issue
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==================================================
+     MAIN CONTENT
+================================================== -->
+
+<main class="report-details-page">
+
+
+    <!-- BACK BUTTON -->
+
+    <a href="my-reports.html"
+       class="back-button">
+
+        ← Back to My Reports
+
+    </a>
+
+
+
+    <!-- ==================================================
+         REPORT HEADER
+    ================================================== -->
+
+    <section class="details-header">
+
+        <div class="details-header-content">
+
+            <span class="details-label">
+                FIXNEAR REPORT
+            </span>
+
+            <h1 id="reportCategory">
+                Report Details
+            </h1>
+
+            <p id="reportId">
+                Report ID
+            </p>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <span id="reportStatus"
+              class="details-status">
+
+            Submitted
+
+        </span>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         QUICK SUMMARY
+    ================================================== -->
+
+    <section class="details-summary-grid">
+
+
+        <div class="summary-item">
+
+            <span class="summary-icon">
+                📋
+            </span>
+
+            <div>
+                <small>
+                    Category
+                </small>
+
+                <strong id="summaryCategory">
+                    —
+                </strong>
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-item">
+
+            <span class="summary-icon">
+                ⚠️
+            </span>
+
+            <div>
+                <small>
+                    Severity
+                </small>
+
+                <strong id="summarySeverity">
+                    —
+                </strong>
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-item">
+
+            <span class="summary-icon">
+                🎯
+            </span>
+
+            <div>
+                <small>
+                    Priority
+                </small>
+
+                <strong id="summaryPriority">
+                    —
+                </strong>
+            </div>
+
+        </div>
+
+
+
+        <div class="summary-item">
+
+            <span class="summary-icon">
+                📅
+            </span>
+
+            <div>
+                <small>
+                    Reported
+                </small>
+
+                <strong id="summaryDate">
+                    —
+                </strong>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         MAIN INFORMATION GRID
+    ================================================== -->
+
+    <section class="details-grid">
+
+
+        <!-- ==================================================
+             ISSUE INFORMATION
+        ================================================== -->
+
+        <div class="details-card">
+
+            <div class="card-heading">
+
+                <div class="card-heading-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <h2>
+                        Issue Information
+                    </h2>
+
+                    <p>
+                        Details about the reported problem
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CATEGORY -->
+
+            <div class="info-row">
+
+                <span>
+                    Category
+                </span>
+
+                <strong id="infoCategory">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- SEVERITY -->
+
+            <div class="info-row">
+
+                <span>
+                    Severity
+                </span>
+
+                <strong id="infoSeverity">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- PRIORITY -->
+
+            <div class="info-row">
+
+                <span>
+                    Priority
+                </span>
+
+                <strong id="infoPriority">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- DATE -->
+
+            <div class="info-row">
+
+                <span>
+                    Date Reported
+                </span>
+
+                <strong id="infoDate">
+                    —
+                </strong>
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="description-box">
+
+                <h3>
+                    📝 Description
+                </h3>
+
+                <p id="infoDescription">
+                    —
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             PHOTO
+        ================================================== -->
+
+        <div class="details-card photo-card">
+
+            <div class="card-heading">
+
+                <div class="card-heading-icon">
+                    📷
+                </div>
+
+                <div>
+
+                    <h2>
+                        Issue Photo
+                    </h2>
+
+                    <p>
+                        Photo submitted with the report
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="photoContainer"
+                 class="photo-container">
+
+                <div class="no-photo">
+
+                    <div class="no-photo-icon">
+                        📷
+                    </div>
+
+                    <p>
+                        No photo uploaded
+                    </p>
+
+                    <span>
+                        This report does not contain an image.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         LOCATION
+    ================================================== -->
+
+    <section class="details-card location-card">
+
+
+        <div class="card-heading">
+
+            <div class="card-heading-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h2>
+                    Report Location
+                </h2>
+
+                <p>
+                    Location information provided with the report
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOCATION NAME -->
+
+        <div class="location-information">
+
+            <div class="location-main">
+
+                <span class="location-pin">
+                    📍
+                </span>
+
+                <p id="reportLocation">
+                    Location unavailable
+                </p>
+
+            </div>
+
+
+            <!-- COORDINATES -->
+
+            <div class="coordinates">
+
+                <div class="coordinate-item">
+
+                    <span>
+                        Latitude
+                    </span>
+
+                    <strong id="latitude">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="coordinate-item">
+
+                    <span>
+                        Longitude
+                    </span>
+
+                    <strong id="longitude">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         STATUS TIMELINE
+    ================================================== -->
+
+    <section class="details-card timeline-card">
+
+
+        <div class="card-heading">
+
+            <div class="card-heading-icon">
+                📈
+            </div>
+
+            <div>
+
+                <h2>
+                    Report Progress
+                </h2>
+
+                <p>
+                    Track the progress of your reported issue
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline">
+
+
+            <!-- ==================================================
+                 STEP 1
+            ================================================== -->
+
+            <div id="submittedTimeline"
+                 class="timeline-item active">
+
+                <div class="timeline-marker">
+
+                    <div class="timeline-dot">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-content">
+
+                    <strong>
+                        Report Submitted
+                    </strong>
+
+                    <p>
+                        Your issue has been submitted successfully.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 STEP 2
+            ================================================== -->
+
+            <div id="reviewTimeline"
+                 class="timeline-item">
+
+                <div class="timeline-marker">
+
+                    <div class="timeline-dot">
+                        2
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-content">
+
+                    <strong>
+                        Under Review
+                    </strong>
+
+                    <p>
+                        The report is waiting for review.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 STEP 3
+            ================================================== -->
+
+            <div id="progressTimeline"
+                 class="timeline-item">
+
+                <div class="timeline-marker">
+
+                    <div class="timeline-dot">
+                        3
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-content">
+
+                    <strong>
+                        Work In Progress
+                    </strong>
+
+                    <p>
+                        Action is being taken on the issue.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 STEP 4
+            ================================================== -->
+
+            <div id="resolvedTimeline"
+                 class="timeline-item">
+
+                <div class="timeline-marker">
+
+                    <div class="timeline-dot">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-content">
+
+                    <strong>
+                        Resolved
+                    </strong>
+
+                    <p>
+                        The reported issue has been resolved.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         REPORT ACTIONS
+    ================================================== -->
+
+    <section class="details-actions">
+
+
+        <a href="my-reports.html"
+           class="secondary-action">
+
+            ← My Reports
+
+        </a>
+
+
+        <a href="status.html"
+           class="primary-action">
+
+            📊 Track Report
+
+        </a>
+
+
+        <a href="report.html"
+           class="report-action">
+
+            + Report Another Issue
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         REPORT NOT FOUND
+    ================================================== -->
+
+    <section id="reportNotFound"
+             class="report-not-found">
+
+        <div class="not-found-icon">
+            🔎
+        </div>
+
+        <h2>
+            Report Not Found
+        </h2>
+
+        <p>
+            We couldn't find the requested report.
+            It may have been deleted or the report ID may be invalid.
+        </p>
+
+        <a href="my-reports.html">
+            Return to My Reports
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+        © 2026 FixNear — Make your community better.
+    </p>
+
+</footer>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="../js/report-details.js"></script>
+
+</body>
+
+</html>

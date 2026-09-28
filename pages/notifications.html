@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications | FixNear</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/notifications.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                Fix<span>Near</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="explore.html">
+                    Explore Issues
+                </a>
+
+                <a href="my-reports.html">
+                    My Reports
+                </a>
+
+                <a href="status.html">
+                    Track Report
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </div>
+
+            <a href="report.html"
+               class="nav-report-btn">
+
+                + Report Issue
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="notifications-page">
+
+        <div class="container">
+
+            <div class="notifications-heading">
+
+                <p class="notifications-label">
+                    FIXNEAR
+                </p>
+
+                <h1>
+                    Notifications
+                </h1>
+
+                <p>
+                    Stay updated about your reported issues.
+                </p>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <div class="notification-summary">
+
+                <div class="notification-summary-card">
+
+                    <strong id="notificationCount">
+                        0 Notifications
+                    </strong>
+
+                    <span>
+                        Total
+                    </span>
+
+                </div>
+
+
+                <div class="notification-summary-card">
+
+                    <strong id="unreadCount">
+                        0 unread
+                    </strong>
+
+                    <span>
+                        Unread
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEADER -->
+
+            <div class="notifications-header">
+
+                <h2>
+                    Recent Notifications
+                </h2>
+
+                <button
+                    type="button"
+                    id="markAllRead"
+                    class="mark-all-read">
+
+                    ✓ Mark All Read
+
+                </button>
+
+            </div>
+
+
+            <!-- NOTIFICATIONS -->
+
+            <div id="notificationsContainer"
+                 class="notifications-container">
+            </div>
+
+
+            <!-- EMPTY -->
+
+            <div id="emptyNotifications"
+                 class="empty-notifications">
+
+                <div class="empty-icon">
+                    🔔
+                </div>
+
+                <h2>
+                    No Notifications
+                </h2>
+
+                <p>
+                    You don't have any notifications yet.
+                </p>
+
+                <a href="report.html"
+                   class="primary-button">
+
+                    Report an Issue
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/notifications.js"></script>
+
+</body>
+
+</html>

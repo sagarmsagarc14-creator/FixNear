@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear - Explore Issues</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Explore CSS -->
+    <link rel="stylesheet" href="../css/explore.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVBAR
+======================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html"
+           class="logo">
+
+            Fix<span>Near</span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="explore.html"
+               class="active">
+                Explore Issues
+            </a>
+
+            <a href="my-reports.html">
+                My Reports
+            </a>
+
+            <a href="status.html">
+                Track Report
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+
+        <a href="report.html"
+           class="nav-report-btn">
+
+            + Report Issue
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ========================================
+     MAIN
+======================================== -->
+
+<main class="explore-page">
+
+
+    <!-- HEADER -->
+
+    <section class="explore-header">
+
+        <p class="explore-label">
+            FIXNEAR
+        </p>
+
+        <h1>
+            Explore Community Issues
+        </h1>
+
+        <p>
+            Discover problems reported by people in your community.
+        </p>
+
+    </section>
+
+
+
+    <!-- ========================================
+         FILTER PANEL
+    ========================================= -->
+
+    <section class="filter-panel">
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <span>
+                🔎
+            </span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search reports..."
+            >
+
+        </div>
+
+
+
+        <!-- FILTERS -->
+
+        <div class="filter-row">
+
+
+            <!-- CATEGORY -->
+
+            <div class="filter-group">
+
+                <label for="categoryFilter">
+                    Category
+                </label>
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Pothole">
+                        Pothole
+                    </option>
+
+                    <option value="Streetlight">
+                        Streetlight
+                    </option>
+
+                    <option value="Garbage">
+                        Garbage
+                    </option>
+
+                    <option value="Water Leakage">
+                        Water Leakage
+                    </option>
+
+                    <option value="Road Damage">
+                        Road Damage
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- SEVERITY -->
+
+            <div class="filter-group">
+
+                <label for="severityFilter">
+                    Severity
+                </label>
+
+                <select id="severityFilter">
+
+                    <option value="all">
+                        All Severity
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <div class="filter-group">
+
+                <label for="statusFilter">
+                    Status
+                </label>
+
+                <select id="statusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Submitted">
+                        Submitted
+                    </option>
+
+                    <option value="Under Review">
+                        Under Review
+                    </option>
+
+                    <option value="In Progress">
+                        In Progress
+                    </option>
+
+                    <option value="Resolved">
+                        Resolved
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- SORT -->
+
+            <div class="filter-group">
+
+                <label for="sortFilter">
+                    Sort By
+                </label>
+
+                <select id="sortFilter">
+
+                    <option value="newest">
+                        Newest First
+                    </option>
+
+                    <option value="oldest">
+                        Oldest First
+                    </option>
+
+                    <option value="priority">
+                        Highest Priority
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RESET -->
+
+        <button
+            type="button"
+            id="resetFilters"
+            class="reset-button">
+
+            Reset Filters
+
+        </button>
+
+    </section>
+
+
+
+    <!-- ========================================
+         RESULTS
+    ========================================= -->
+
+    <div class="results-bar">
+
+        <span id="resultsCount">
+            0 reports found
+        </span>
+
+    </div>
+
+
+
+    <!-- ========================================
+         REPORTS
+    ========================================= -->
+
+    <section
+        id="exploreReports"
+        class="explore-reports">
+    </section>
+
+
+
+    <!-- ========================================
+         EMPTY
+    ========================================= -->
+
+    <section
+        id="exploreEmpty"
+        class="explore-empty">
+
+        <div class="empty-icon">
+            🔍
+        </div>
+
+        <h2>
+            No Issues Found
+        </h2>
+
+        <p>
+            Try changing your search or filters.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ========================================
+     JAVASCRIPT
+======================================== -->
+
+<script src="../js/explore.js"></script>
+
+</body>
+
+</html>

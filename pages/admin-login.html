@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear - Admin Portal</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../css/admin-login.css">
+
+</head>
+
+
+<body>
+
+<main class="login-page">
+
+
+    <!-- BACKGROUND DECORATION -->
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="background-grid"></div>
+
+
+    <!-- MAIN LOGIN WRAPPER -->
+
+    <div class="login-wrapper">
+
+
+        <!-- ====================================
+             LEFT INFORMATION PANEL
+        ===================================== -->
+
+        <section class="login-info">
+
+            <div class="info-content">
+
+                <div class="brand">
+
+                    <div class="brand-icon">
+                        ✓
+                    </div>
+
+                    <div class="brand-name">
+                        Fix<span>Near</span>
+                    </div>
+
+                </div>
+
+
+                <div class="info-badge">
+                    🛡️ ADMIN PORTAL
+                </div>
+
+
+                <h1>
+                    Make your
+                    <span>community</span>
+                    better.
+                </h1>
+
+
+                <p class="info-description">
+
+                    Manage reported issues, monitor
+                    community problems and help make
+                    local neighborhoods safer and better.
+
+                </p>
+
+
+                <!-- FEATURES -->
+
+                <div class="feature-list">
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            📋
+                        </div>
+
+                        <div>
+                            <strong>
+                                Manage Reports
+                            </strong>
+
+                            <span>
+                                Review community issues
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            📊
+                        </div>
+
+                        <div>
+                            <strong>
+                                Track Progress
+                            </strong>
+
+                            <span>
+                                Monitor issue resolution
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <div class="feature-icon">
+                            🔔
+                        </div>
+
+                        <div>
+                            <strong>
+                                Stay Updated
+                            </strong>
+
+                            <span>
+                                Receive report notifications
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-footer">
+
+                    <span class="online-dot"></span>
+
+                    FixNear Admin System
+
+                    <span>
+                        •
+                    </span>
+
+                    Secure Portal
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================
+             LOGIN CARD
+        ===================================== -->
+
+        <section class="login-section">
+
+            <div class="login-card">
+
+
+                <!-- SECURITY ICON -->
+
+                <div class="security-icon">
+
+                    <span>
+                        🔐
+                    </span>
+
+                </div>
+
+
+                <p class="login-label">
+                    ADMINISTRATOR ACCESS
+                </p>
+
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+
+                <p class="login-subtitle">
+                    Sign in to access your FixNear
+                    administration dashboard.
+                </p>
+
+
+                <!-- LOGIN FORM -->
+
+                <form id="adminLoginForm">
+
+
+                    <!-- USERNAME -->
+
+                    <div class="form-group">
+
+                        <label for="adminUsername">
+                            Username
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                👤
+                            </span>
+
+                            <input
+                                type="text"
+                                id="adminUsername"
+                                placeholder="Enter your username"
+                                autocomplete="username"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="password-label-row">
+
+                            <label for="adminPassword">
+                                Password
+                            </label>
+
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                🔑
+                            </span>
+
+                            <input
+                                type="password"
+                                id="adminPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="password-toggle"
+                                aria-label="Show password">
+
+                                👁️
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="login-options">
+
+                        <label class="remember-option">
+
+                            <input
+                                type="checkbox"
+                                id="rememberAdmin">
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        <span>
+                            🔐
+                        </span>
+
+                        Sign In to Dashboard
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <!-- MESSAGE -->
+
+                    <p
+                        id="loginMessage"
+                        class="login-message">
+                    </p>
+
+
+                </form>
+
+
+                <!-- SECURITY -->
+
+                <div class="secure-message">
+
+                    <span>
+                        🔒
+                    </span>
+
+                    Secure administrator access
+
+                </div>
+
+
+                <!-- BACK -->
+
+                <a
+                    href="../index.html"
+                    class="back-home">
+
+                    ← Return to FixNear
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<script src="../js/admin-login.js"></script>
+
+
+<!-- PASSWORD TOGGLE -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const password =
+            document.getElementById(
+                "adminPassword"
+            );
+
+        const toggle =
+            document.getElementById(
+                "togglePassword"
+            );
+
+
+        if (password && toggle) {
+
+            toggle.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        password.type ===
+                        "password"
+                    ) {
+
+                        password.type =
+                            "text";
+
+                        toggle.textContent =
+                            "🙈";
+
+                        toggle.setAttribute(
+                            "aria-label",
+                            "Hide password"
+                        );
+
+                    } else {
+
+                        password.type =
+                            "password";
+
+                        toggle.textContent =
+                            "👁️";
+
+                        toggle.setAttribute(
+                            "aria-label",
+                            "Show password"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

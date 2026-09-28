@@ -1,0 +1,294 @@
+/* ========================================
+   FIXNEAR - NOTIFICATIONS
+======================================== */
+
+.notifications-page {
+    padding: 60px 20px;
+    min-height: calc(100vh - 80px);
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.notifications-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.notifications-heading span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.notifications-heading h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.notifications-heading p {
+    font-size: 17px;
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   TOOLBAR
+======================================== */
+
+.notification-toolbar {
+    max-width: 900px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.notification-toolbar strong {
+    font-size: 18px;
+}
+
+.notification-toolbar p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    opacity: 0.65;
+}
+
+
+/* ========================================
+   MARK READ BUTTON
+======================================== */
+
+.mark-read-button {
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    background: #f1f5f9;
+
+    transition: 0.2s;
+}
+
+.mark-read-button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   NOTIFICATION CONTAINER
+======================================== */
+
+.notifications-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* ========================================
+   NOTIFICATION CARD
+======================================== */
+
+.notification-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    margin-bottom: 14px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+
+    transition: 0.2s;
+}
+
+.notification-card:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   UNREAD
+======================================== */
+
+.notification-card.unread {
+    border-left: 4px solid #2563eb;
+
+    background: #f8fbff;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.notification-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #f1f5f9;
+
+    font-size: 24px;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h3 {
+    margin: 0 0 6px;
+
+    font-size: 17px;
+}
+
+.notification-content p {
+    margin: 0;
+
+    line-height: 1.5;
+
+    opacity: 0.75;
+}
+
+.notification-time {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    opacity: 0.55;
+}
+
+
+/* ========================================
+   READ BUTTON
+======================================== */
+
+.notification-read-button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    padding: 6px 8px;
+}
+
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.empty-notifications {
+    max-width: 700px;
+
+    margin: 40px auto;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.empty-notification-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.empty-notifications h2 {
+    margin-bottom: 10px;
+}
+
+.empty-notifications p {
+    opacity: 0.65;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .notifications-page {
+        padding: 40px 15px;
+    }
+
+    .notifications-heading h1 {
+        font-size: 32px;
+    }
+
+    .notification-toolbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .mark-read-button {
+        width: 100%;
+    }
+
+    .notification-card {
+        padding: 16px;
+    }
+
+    .notification-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+    }
+
+}

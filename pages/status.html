@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear - Track Report</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../css/status.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVBAR
+======================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+            Fix<span>Near</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="explore.html">
+                Explore Issues
+            </a>
+
+            <a href="my-reports.html">
+                My Reports
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ========================================
+     STATUS PAGE
+======================================== -->
+
+<main class="status-page">
+
+
+    <div class="status-header">
+
+        <p class="status-label">
+            FIXNEAR
+        </p>
+
+        <h1>
+            Track Your Report
+        </h1>
+
+        <p>
+            Follow the progress of your reported issue.
+        </p>
+
+    </div>
+
+
+    <!-- ====================================
+         SEARCH
+    ==================================== -->
+
+    <div class="status-search">
+
+        <input
+            type="text"
+            id="reportIdInput"
+            placeholder="Enter Report ID e.g. FN-123456">
+
+        <button id="trackButton">
+            Track Report
+        </button>
+
+    </div>
+
+
+    <!-- ====================================
+         RESULT
+    ==================================== -->
+
+    <div
+        id="statusResult"
+        class="status-result">
+
+    </div>
+
+
+</main>
+
+
+<script src="../js/status.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-button {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .statistics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .nav-container {
+        height: 65px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .fake-map {
+        height: 260px;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .cta-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+/* =========================
+   REPORT PAGE MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .report-page {
+        padding: 45px 0 70px;
+    }
+
+    .report-heading h1 {
+        font-size: 32px;
+    }
+
+    .report-form {
+        padding: 22px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-card {
+        padding: 14px;
+    }
+
+    .severity-options {
+        flex-direction: column;
+    }
+
+    .severity-options span {
+        text-align: center;
+    }
+}
+/* ========================================
+   EXPLORE MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .explore-page {
+        padding: 45px 0 70px;
+    }
+
+
+    .explore-heading h1 {
+        font-size: 31px;
+    }
+
+
+    .explore-controls {
+        flex-direction: column;
+    }
+
+
+    .explore-controls select,
+    .explore-controls button {
+        width: 100%;
+    }
+
+
+    #map {
+        height: 400px;
+    }
+
+
+    .issues-section-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+
+    .explore-issue-card {
+        padding: 16px;
+    }
+
+
+    .explore-card-top {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    .explore-card-top span {
+        width: fit-content;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .explore-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .map-controls {
+        flex-direction: column;
+    }
+
+    .map-controls select,
+    .map-controls button {
+        width: 100%;
+    }
+
+    #map {
+        height: 350px;
+    }
+
+    .issue-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .explore-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .issue-card {
+        padding: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .explore-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .map-controls {
+        flex-direction: column;
+    }
+
+    .map-controls select,
+    .map-controls button {
+        width: 100%;
+    }
+
+    #map {
+        height: 350px;
+    }
+
+    .issue-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .issue-card {
+        padding: 16px;
+    }
+}
+/* ========================================
+   MY REPORTS - MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* Make My Reports statistics stack vertically */
+    .report-stats,
+    .my-reports-stats,
+    .reports-stats,
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+
+    /* Make each statistics card fit the phone */
+    .report-stat,
+    .my-report-stat,
+    .report-stat-card,
+    .stat-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Prevent report cards from overflowing */
+    .report-card,
+    .my-report-card,
+    .reports-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}

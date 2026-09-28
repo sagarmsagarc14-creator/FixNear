@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear | Report Local Problems</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✓</span>
+                FixNear
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/dashboard.html">
+    Dashboard
+</a>
+
+                <a href="pages/explore.html">
+                    Explore Issues
+                </a>
+
+                <a href="pages/my-reports.html">
+                    My Reports
+                </a>
+
+                <a href="pages/about.html">
+                    About
+                </a>
+
+            </nav>
+
+            <a href="pages/report.html" class="nav-button">
+                + Report Issue
+            </a>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        🌍 Make your neighborhood better
+                    </div>
+
+                    <h1>
+                        See a problem?
+                        <span>Report it.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        FixNear helps people report potholes, broken
+                        streetlights, garbage problems, water leaks and
+                        other local issues — quickly and easily.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="pages/report.html" class="primary-button">
+                            📢 Report an Issue
+                        </a>
+
+                        <a href="pages/explore.html" class="secondary-button">
+                            🗺️ Explore Issues
+                        </a>
+
+                    </div>
+
+                    <div class="hero-note">
+                        ✓ Free to use &nbsp;&nbsp;
+                        ✓ Community powered &nbsp;&nbsp;
+                        ✓ Easy to report
+                    </div>
+
+                </div>
+
+
+                <!-- Hero visual -->
+
+                <div class="hero-visual">
+
+                    <div class="map-card">
+
+                        <div class="map-header">
+
+                            <strong>Nearby Issues</strong>
+
+                            <span class="live-status">
+                                ● Live
+                            </span>
+
+                        </div>
+
+                        <div class="fake-map">
+
+                            <div class="map-road road-one"></div>
+                            <div class="map-road road-two"></div>
+
+                            <div class="map-marker marker-one">
+                                🕳️
+                            </div>
+
+                            <div class="map-marker marker-two">
+                                💡
+                            </div>
+
+                            <div class="map-marker marker-three">
+                                🗑️
+                            </div>
+
+                            <div class="user-location">
+                                📍
+                            </div>
+
+                        </div>
+
+                        <div class="map-footer">
+
+                            <div>
+                                <strong>24</strong>
+                                <small>Issues nearby</small>
+                            </div>
+
+                            <div>
+                                <strong>18</strong>
+                                <small>Resolved</small>
+                            </div>
+
+                            <div>
+                                <strong>6</strong>
+                                <small>In progress</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="statistics">
+
+            <div class="container statistics-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📢
+                    </div>
+
+                    <div>
+                        <h2>1,248</h2>
+                        <p>Issues Reported</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✅
+                    </div>
+
+                    <div>
+                        <h2>972</h2>
+                        <p>Issues Resolved</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+                        <h2>3,420</h2>
+                        <p>Community Members</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+                        <h2>78%</h2>
+                        <p>Resolution Rate</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>HOW IT WORKS</span>
+
+                    <h2>
+                        Fix a problem in three simple steps
+                    </h2>
+
+                    <p>
+                        Reporting a local problem shouldn't be complicated.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            📸
+                        </div>
+
+                        <h3>Spot a Problem</h3>
+
+                        <p>
+                            Find a pothole, broken streetlight,
+                            garbage issue or another local problem.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            📢
+                        </div>
+
+                        <h3>Report It</h3>
+
+                        <p>
+                            Upload a photo, describe the problem
+                            and provide its location.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-card">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            ✅
+                        </div>
+
+                        <h3>Track Progress</h3>
+
+                        <p>
+                            Follow your report and see when the
+                            problem gets resolved.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>WHY FIXNEAR?</span>
+
+                    <h2>
+                        Built for real community problems
+                    </h2>
+
+                </div>
+
+
+                <div class="features-grid">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📍
+                        </div>
+
+                        <h3>Location Based</h3>
+
+                        <p>
+                            Find and report problems based on
+                            their actual location.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📷
+                        </div>
+
+                        <h3>Photo Evidence</h3>
+
+                        <p>
+                            Add photos so the problem can be
+                            understood clearly.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🔎
+                        </div>
+
+                        <h3>Track Reports</h3>
+
+                        <p>
+                            Easily track the progress of problems
+                            you have reported.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            👥
+                        </div>
+
+                        <h3>Community Powered</h3>
+
+                        <p>
+                            People can work together to highlight
+                            important local problems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container cta-container">
+
+                <div>
+
+                    <h2>
+                        Found something that needs fixing?
+                    </h2>
+
+                    <p>
+                        Your report could help make your community better.
+                    </p>
+
+                </div>
+
+                <a href="pages/report.html" class="cta-button">
+                    Report an Issue →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div>
+
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-icon">✓</span>
+                    FixNear
+                </a>
+
+                <p>
+                    Report problems. Improve your community.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="pages/explore.html">
+                    Explore
+                </a>
+
+                <a href="pages/report.html">
+                    Report Issue
+                </a>
+
+                <a href="pages/about.html">
+                    About
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 FixNear. Built to make communities better.
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html> 

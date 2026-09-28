@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Reports | FixNear</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+
+                <span class="logo-icon">✓</span>
+
+                FixNear
+
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="explore.html">
+                    Explore Issues
+                </a>
+
+                <a href="my-reports.html" class="active">
+                    My Reports
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+            <a href="report.html" class="nav-button">
+                + Report Issue
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="my-reports-page">
+
+        <div class="container">
+
+            <!-- HEADER -->
+
+            <div class="my-reports-heading">
+
+                <span>YOUR ACTIVITY</span>
+
+                <h1>
+                    My Reports
+                </h1>
+
+                <p>
+                    Track the problems you have reported
+                    to your community.
+                </p>
+
+            </div>
+
+
+            <!-- REPORT SUMMARY -->
+
+            <div class="report-summary">
+
+                <div class="summary-card">
+
+                    <strong id="totalReports">
+                        0
+                    </strong>
+
+                    <span>
+                        Total Reports
+                    </span>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <strong id="submittedReports">
+                        0
+                    </strong>
+
+                    <span>
+                        Submitted
+                    </span>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <strong id="resolvedReports">
+                        0
+                    </strong>
+
+                    <span>
+                        Resolved
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- REPORT LIST -->
+
+            <div class="reports-header">
+
+                <h2>
+                    Your Reports
+                </h2>
+
+                <a href="report.html" class="small-report-button">
+                    + New Report
+                </a>
+
+            </div>
+
+
+            <div id="reportsContainer">
+
+                <!-- Reports will appear here -->
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div id="emptyReports" class="empty-reports">
+
+                <div class="empty-icon">
+                    📋
+                </div>
+
+                <h2>
+                    No reports yet
+                </h2>
+
+                <p>
+                    You haven't reported any local problems yet.
+                </p>
+
+                <a href="report.html" class="primary-button">
+                    Report Your First Issue
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+   <script src="../js/my-report.js"></script>
+</body>
+
+</html>

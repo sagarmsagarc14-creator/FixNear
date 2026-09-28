@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FixNear - Issue Map</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../css/map.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVBAR
+======================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+            Fix<span>Near</span>
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="explore.html">
+                Explore Issues
+            </a>
+
+            <a href="my-reports.html">
+                My Reports
+            </a>
+
+            <a href="status.html">
+                Track Report
+            </a>
+
+            <a href="notifications.html">
+                🔔 Notifications
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ========================================
+     MAP PAGE
+======================================== -->
+
+<main class="map-page">
+
+
+    <!-- HEADER -->
+
+    <section class="map-header">
+
+        <p class="map-label">
+            FIXNEAR
+        </p>
+
+        <h1>
+            Community Issue Map
+        </h1>
+
+        <p>
+            Explore reported problems around your community.
+        </p>
+
+    </section>
+
+
+    <!-- ====================================
+         MAP LAYOUT
+    ==================================== -->
+
+    <section class="map-layout">
+
+
+        <!-- =================================
+             REPORT LIST
+        ================================== -->
+
+        <aside class="map-sidebar">
+
+            <div class="sidebar-header">
+
+                <div>
+
+                    <h2>
+                        Reported Issues
+                    </h2>
+
+                    <p id="reportCount">
+                        0 reports
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="mapReports"
+                class="map-reports">
+            </div>
+
+
+            <div
+                id="mapEmpty"
+                class="map-empty">
+
+                <div>
+                    🗺️
+                </div>
+
+                <h3>
+                    No Location Reports
+                </h3>
+
+                <p>
+                    Reports with location data will appear here.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================
+             MAP
+        ================================== -->
+
+        <div class="map-container">
+
+            <iframe
+                id="osmMap"
+                title="FixNear Community Map"
+                loading="lazy"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=77.55,12.90,77.65,13.00&layer=mapnik">
+            </iframe>
+
+
+            <div class="map-note">
+
+                📍 Select an issue from the list to view
+                its location.
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="../js/map.js"></script>
+
+</body>
+
+</html>

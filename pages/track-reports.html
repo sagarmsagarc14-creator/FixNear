@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Track Report | FixNear</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        .track-page {
+            min-height: 80vh;
+            padding: 60px 20px;
+            background: #f7f9fc;
+        }
+
+        .track-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .track-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .track-heading span {
+            font-size: 14px;
+            font-weight: bold;
+            color: #64748b;
+        }
+
+        .track-heading h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .track-heading p {
+            color: #64748b;
+        }
+
+        .track-search {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .track-search input {
+            flex: 1;
+            padding: 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .track-search button {
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #172033;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .track-search button:hover {
+            opacity: 0.9;
+        }
+
+        .track-result {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: none;
+        }
+
+        .track-result h2 {
+            margin-top: 0;
+        }
+
+        .report-status {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #e8f5e9;
+            color: #15803d;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .report-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .info-box {
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .info-box span {
+            color: #64748b;
+        }
+
+        .track-error {
+            display: none;
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            .track-heading h1 {
+                font-size: 32px;
+            }
+
+            .track-search {
+                flex-direction: column;
+            }
+
+            .report-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html" class="logo">
+            Fix<span>Near</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="explore.html">
+                Explore Issues
+            </a>
+
+            <a href="my-reports.html">
+                My Reports
+            </a>
+
+            <a href="track-report.html" class="active">
+                Track Report
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </div>
+
+        <a href="report.html" class="nav-report-btn">
+            + Report Issue
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- MAIN -->
+
+<main class="track-page">
+
+    <div class="track-container">
+
+        <div class="track-heading">
+
+            <span>FIXNEAR</span>
+
+            <h1>
+                Track Your Report
+            </h1>
+
+            <p>
+                Enter your report ID to check the current status.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="track-search">
+
+            <input
+                type="text"
+                id="reportIdInput"
+                placeholder="Example: FN-123456789"
+            >
+
+            <button id="trackButton">
+                Track Report
+            </button>
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div
+            id="trackError"
+            class="track-error">
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div
+            id="trackResult"
+            class="track-result">
+
+            <h2>
+                Report Details
+            </h2>
+
+            <div
+                id="reportStatus"
+                class="report-status">
+            </div>
+
+
+            <div class="report-info">
+
+                <div class="info-box">
+                    <strong>Report ID</strong>
+                    <span id="resultId"></span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Category</strong>
+                    <span id="resultCategory"></span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Description</strong>
+                    <span id="resultDescription"></span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Location</strong>
+                    <span id="resultLocation"></span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Severity</strong>
+                    <span id="resultSeverity"></span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Priority</strong>
+                    <span id="resultPriority"></span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Date</strong>
+                    <span id="resultDate"></span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Status</strong>
+                    <span id="resultStatusText"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="../js/track-report.js"></script>
+
+</body>
+
+</html>

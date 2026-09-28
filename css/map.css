@@ -1,0 +1,445 @@
+/* ========================================
+   FIXNEAR - COMMUNITY MAP
+======================================== */
+
+
+/* ========================================
+   PAGE
+======================================== */
+
+.map-page {
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 50px 20px;
+
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.map-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+.map-label {
+
+    margin: 0 0 8px;
+
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.map-header h1 {
+
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 36px;
+
+}
+
+
+.map-header > p:last-child {
+
+    margin: 0;
+
+    color: #64748b;
+
+}
+
+
+/* ========================================
+   MAP LAYOUT
+======================================== */
+
+.map-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        350px 1fr;
+
+    gap: 20px;
+
+    min-height: 600px;
+
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.map-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+}
+
+
+.sidebar-header {
+
+    padding: 20px;
+
+    border-bottom:
+        1px solid #e2e8f0;
+
+}
+
+
+.sidebar-header h2 {
+
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 20px;
+
+}
+
+
+.sidebar-header p {
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+/* ========================================
+   REPORT LIST
+======================================== */
+
+.map-reports {
+
+    overflow-y: auto;
+
+    max-height: 520px;
+
+}
+
+
+/* ========================================
+   REPORT CARD
+======================================== */
+
+.map-report-card {
+
+    width: 100%;
+
+    display: block;
+
+    padding: 17px;
+
+    border: none;
+
+    border-bottom:
+        1px solid #e2e8f0;
+
+    background: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.map-report-card:hover {
+
+    background: #f8fafc;
+
+}
+
+
+.map-report-id {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.map-report-card h3 {
+
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 15px;
+
+}
+
+
+.map-report-card p {
+
+    margin: 0 0 10px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.map-status {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 15px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+/* ========================================
+   MAP
+======================================== */
+
+.map-container {
+
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    background: #e2e8f0;
+
+}
+
+
+.map-container iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 600px;
+
+    display: block;
+
+    border: none;
+
+}
+
+
+/* ========================================
+   MAP NOTE
+======================================== */
+
+.map-note {
+
+    position: absolute;
+
+    left: 15px;
+
+    bottom: 15px;
+
+    padding: 10px 14px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.95
+    );
+
+    border-radius: 8px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(15, 23, 42, 0.12);
+
+}
+
+
+/* ========================================
+   EMPTY
+======================================== */
+
+.map-empty {
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: #64748b;
+
+}
+
+
+.map-empty div {
+
+    margin-bottom: 12px;
+
+    font-size: 45px;
+
+}
+
+
+.map-empty h3 {
+
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 18px;
+
+}
+
+
+.map-empty p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .map-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .map-sidebar {
+
+        order: 2;
+
+    }
+
+
+    .map-container {
+
+        order: 1;
+
+    }
+
+
+    .map-reports {
+
+        max-height: 400px;
+
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .map-page {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .map-header h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .map-container {
+
+        min-height: 450px;
+
+    }
+
+
+    .map-container iframe {
+
+        min-height: 450px;
+
+    }
+
+
+    .map-note {
+
+        left: 10px;
+
+        right: 10px;
+
+        bottom: 10px;
+
+    }
+
+}
